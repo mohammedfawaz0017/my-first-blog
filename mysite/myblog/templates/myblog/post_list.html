@@ -8,17 +8,14 @@
             <h1><a href="/">BISMILLAH</a></h1>
         </div>
 
-        <div>
-            <p>published: 17.06.2020, 02:30</p>
-            <h2><a href="">My first post</a></h2>
-            <p>please let me learn allah</p>
-        </div>
-
-        <div>
-            <p>published: 17.06.2020, 02:30</p>
-            <h2><a href="">My first post</a></h2>
-            <p>please let me lear allah</p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <P>publisheed:{{ post.published_date }}</P>
+                <h2><a href="">{{ post.title }}<a></h2>
+                <P>{{ post.text|linebreaksbr }}</P>    
+            </div>
+            
+        {% endfor %}    
        
     </body>
 </html>
